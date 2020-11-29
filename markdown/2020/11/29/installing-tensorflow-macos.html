@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Installation of Tensorflow for Mac OS | tech-yarn</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Installation of Tensorflow for Mac OS" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Installing tensorflow_macos" />
+<meta property="og:description" content="Installing tensorflow_macos" />
+<link rel="canonical" href="https://edmtekx.github.io/tech-yarn/markdown/2020/11/29/installing-tensorflow-macos.html" />
+<meta property="og:url" content="https://edmtekx.github.io/tech-yarn/markdown/2020/11/29/installing-tensorflow-macos.html" />
+<meta property="og:site_name" content="tech-yarn" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-11-29T00:00:00-06:00" />
+<script type="application/ld+json">
+{"url":"https://edmtekx.github.io/tech-yarn/markdown/2020/11/29/installing-tensorflow-macos.html","@type":"BlogPosting","headline":"Installation of Tensorflow for Mac OS","dateModified":"2020-11-29T00:00:00-06:00","datePublished":"2020-11-29T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://edmtekx.github.io/tech-yarn/markdown/2020/11/29/installing-tensorflow-macos.html"},"description":"Installing tensorflow_macos","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/tech-yarn/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://edmtekx.github.io/tech-yarn/feed.xml" title="tech-yarn" /><link rel="shortcut icon" type="image/x-icon" href="/tech-yarn/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/tech-yarn/">tech-yarn</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/tech-yarn/about/">About Me</a><a class="page-link" href="/tech-yarn/search/">Search</a><a class="page-link" href="/tech-yarn/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Installation of Tensorflow for Mac OS</h1><p class="page-description">Installing tensorflow_macos</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-11-29T00:00:00-06:00" itemprop="datePublished">
+        Nov 29, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/tech-yarn/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#background">Background</a></li>
+<li class="toc-entry toc-h1"><a href="#conda-installation-instructions">Conda installation Instructions</a></li>
+<li class="toc-entry toc-h1"><a href="#references">References</a></li>
+</ul><h1 id="background">
+<a class="anchor" href="#background" aria-hidden="true"><span class="octicon octicon-link"></span></a>Background</h1>
+
+<p>The official installation instructions are in he Git Repo for TensorFlow for Mac:</p>
+
+<p>Mac-optimized TensorFlow and TensorFlow Addons: https://github.com/apple/tensorflow_macos</p>
+
+<p>There are two key requirements:</p>
+
+<ul>
+  <li>
+    <p>macOS 11.0 Big Sur. (however as you will see later the pip wheels that have the packages for TF Mac actually won’t work if you leave the 11.0 version reference. They have to be changed to 10.6. This was discovered by the community.</p>
+  </li>
+  <li>
+    <p>Python 3.8.  Supposedly available from the Xcode command line tools. While I installed this, I never figured out how to use them, so I just used a standard conda environment and chose a conda Python 3.8 distribution.</p>
+  </li>
+</ul>
+
+<p>The instructions in this post are somewhat different than what is recommended in the repo above. The Apple Git repo suggests using a virtual environment and provides a short sell script to try this out. I could not get this to work, so I created a different approach that I have used elsewhere. Besides I don’t use <code class="language-plaintext highlighter-rouge">virtualenv</code>, but rather <code class="language-plaintext highlighter-rouge">conda</code> so the instructions provided here are for installing it inside a <code class="language-plaintext highlighter-rouge">conda</code> environment and it is a very manual process at that.</p>
+
+<p>The Apple developers have said that they will look into creating a more formal approach to using <code class="language-plaintext highlighter-rouge">conda</code>, so eventually it is likely that these instructions will become outdated.</p>
+
+<h1 id="conda-installation-instructions">
+<a class="anchor" href="#conda-installation-instructions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conda installation Instructions</h1>
+
+<p>While Tensorflow for MacOS is supposed to be able to work on both Intel and the new M1 based Macs, these installation instructions have only been tested in an Intel based Mac.</p>
+
+<p>These are the steps:</p>
+
+<ol>
+  <li>
+    <p>Create a Conda environment with Python 3.8:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">conda create -n tfmac python=3.8</code></p>
+  </li>
+  <li>
+    <p>Activate the environment:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">conda activate tfmac</code></p>
+  </li>
+  <li>
+    <p>Go to 
+ https://github.com/apple/tensorflow_macos/releases/ and download/v0.1alpha0/tensorflow_macos-0.1alpha0.tar.gz</p>
+  </li>
+  <li>Extract it to a folder of  your choosing.</li>
+  <li>
+    <p>In the extracted folder go to the <code class="language-plaintext highlighter-rouge">x86_64</code> folder. Inside that folder there will be a few <code class="language-plaintext highlighter-rouge">"*whl"</code> files. Their names will be in the format of:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">tensorflow_macos-0.1a0-cp38-cp38-macosx_11_0_x86_64.whl</code></p>
+
+    <p>All of the files will have the <code class="language-plaintext highlighter-rouge">"11_0"</code> string in their name. This will need to be changed. This change in the file name is (apparently) a hack that the community has come up with - without it, it will not work.</p>
+
+    <p>In any case, the <code class="language-plaintext highlighter-rouge">"11_0"</code> string in the name of all the “wheels” has to be changed to <code class="language-plaintext highlighter-rouge">"10_16"</code>.  For example from:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">tensorflow_macos-0.1a0-cp38-cp38-macosx_11_0_x86_64.whl</code></p>
+
+    <p>to</p>
+
+    <p><code class="language-plaintext highlighter-rouge">tensorflow_macos-0.1a0-cp38-cp38-macosx_10_16_x86_64.whl</code></p>
+
+    <p>Do this for all of the wheels.</p>
+  </li>
+  <li>
+    <p>Now install them with pip, for example:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">pip install grpcio-1.33.2-cp38-cp38-macosx_10_16_x86_64.whl</code></p>
+
+    <p>Repeat for all of the wheels in the directory.</p>
+  </li>
+  <li>
+    <p>Install other packages tht are needed:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">conda install -c conda-forge -y absl-py</code></p>
+
+    <p><code class="language-plaintext highlighter-rouge">conda install -c conda-forge -y astunparse</code></p>
+
+    <p><code class="language-plaintext highlighter-rouge">conda install -c conda-forge -y gast</code></p>
+
+    <p><code class="language-plaintext highlighter-rouge">conda install -c conda-forge -y opt_einsum</code></p>
+
+    <p><code class="language-plaintext highlighter-rouge">conda install -c conda-forge -y termcolor</code></p>
+
+    <p><code class="language-plaintext highlighter-rouge">conda install -c conda-forge -y typing_extensions</code></p>
+
+    <p><code class="language-plaintext highlighter-rouge">conda install -c conda-forge -y wheel</code></p>
+
+    <p><code class="language-plaintext highlighter-rouge">conda install -c conda-forge -y typeguard</code></p>
+
+    <p><code class="language-plaintext highlighter-rouge">pip install tensorboard</code></p>
+
+    <p><code class="language-plaintext highlighter-rouge">pip install wrapt flatbuffers tensorflow_estimator google_pasta keras_preprocessing protobu</code></p>
+  </li>
+  <li>This will give you a basic TF for Mac environment.  You will still probably need to add other packages to the environment (if they were not added by the wheels):</li>
+</ol>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Scikit-learn</code></p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Matplotlib</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Etc.</code></li>
+</ul>
+
+<h1 id="references">
+<a class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h1>
+<p>’</p>
+<ol>
+  <li>
+    <p>Apple Official repo for Tensorflow for Mac. https://github.com/apple/tensorflow_macos</p>
+  </li>
+  <li>
+    <p>Issue #3 in the Official Repo.  https://github.com/apple/tensorflow_macos/issues/3. Note that the closest solution is towards the bottom.  In the end I did not use exactly this, but I combined the instructions here with the reference below.</p>
+  </li>
+  <li>
+    <p>Comment from user nehbit in this issue: https://github.com/apple/tensorflow_macos/issues/7#issuecomment-730266180</p>
+  </li>
+</ol>
+
+
+  </div><a class="u-url" href="/tech-yarn/markdown/2020/11/29/installing-tensorflow-macos.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/tech-yarn/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/tech-yarn/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/tech-yarn/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>TBD</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/tech-yarn/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/tech-yarn/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
