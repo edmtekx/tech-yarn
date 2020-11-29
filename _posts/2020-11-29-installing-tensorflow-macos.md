@@ -7,9 +7,9 @@ title: Installation of Tensorflow for Mac OS
 ---
 # Background
 
-The official installation instructions are in he Git Repo for TensorFlow for Mac:
+The official installation instructions are in the Git Repo for TensorFlow for Mac:
 
-[Mac-optimized TensorFlow and TensorFlow Addons] [https://github.com/apple/tensorflow_macos]
+[Mac-optimized TensorFlow and TensorFlow Addons](https://github.com/apple/tensorflow_macos)
 
 There are two key requirements:
 
@@ -82,15 +82,16 @@ These are the steps:
 * `Scikit-learn`
 
 * `Matplotlib`
+
 * `Etc.`
 
 
 # References
 
-1. [Apple Official repo for Tensorflow for Mac] [https://github.com/apple/tensorflow_macos]
+1. [Apple Official repo for Tensorflow for Mac](https://github.com/apple/tensorflow_macos)
 
-2. [Issue #3 in the Official Repo]  [https://github.com/apple/tensorflow_macos/issues/3]. Note that the closest solution is towards the bottom.  In the end I did not use exactly this, but I combined the instructions here with the reference below.
+2. [Issue #3 in the Official Repo](https://github.com/apple/tensorflow_macos/issues/3). Note that the closest solution is towards the bottom.  In the end I did not use exactly this, but I combined the instructions here with the reference below.
 
-3. [Comment from user nehbit in this issue] [https://github.com/apple/tensorflow_macos/issues/7#issuecomment-730266180]
+3. [Comment from user nehbit in this issue](https://github.com/apple/tensorflow_macos/issues/7#issuecomment-730266180)
 	
 
