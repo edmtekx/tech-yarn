@@ -9,15 +9,15 @@
 <meta property="og:title" content="TensorFlow for Mac OS Quick Start" />
 <meta name="author" content="tensorflow.org, Ed Martinez" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This notebook shows a very quick example of how to run standard TensorFow 2.0 code in the Tensorflow for MacOS environment. The code in this notebook is basically a port of the TensorFlow 2 quickstart for beginners from https://www.tensorflow.org/tutorials/quickstart/beginner." />
-<meta property="og:description" content="This notebook shows a very quick example of how to run standard TensorFow 2.0 code in the Tensorflow for MacOS environment. The code in this notebook is basically a port of the TensorFlow 2 quickstart for beginners from https://www.tensorflow.org/tutorials/quickstart/beginner." />
+<meta name="description" content="This notebook shows a very quick example of how to run standard TensorFow 2.0 code in the Tensorflow for MacOS environment. The code in this notebook is basically a port of the TensorFlow 2 quickstart for beginners from https://www.tensorflow.org/tutorials/quickstart/beginner. The code is mostly unchaged from the original tutorial. I have added in a couple of places comments and/or print statements to check and see what is going on. The goal is to (hopefully) demonstrate that you should be able (for the most part) take regular Tensorflow 2.0 code and run it under the Mac OS implementation." />
+<meta property="og:description" content="This notebook shows a very quick example of how to run standard TensorFow 2.0 code in the Tensorflow for MacOS environment. The code in this notebook is basically a port of the TensorFlow 2 quickstart for beginners from https://www.tensorflow.org/tutorials/quickstart/beginner. The code is mostly unchaged from the original tutorial. I have added in a couple of places comments and/or print statements to check and see what is going on. The goal is to (hopefully) demonstrate that you should be able (for the most part) take regular Tensorflow 2.0 code and run it under the Mac OS implementation." />
 <link rel="canonical" href="https://edmtekx.github.io/tech-yarn/tensorflow/macos/keras/2020/11/30/tf2macos-quickstart.html" />
 <meta property="og:url" content="https://edmtekx.github.io/tech-yarn/tensorflow/macos/keras/2020/11/30/tf2macos-quickstart.html" />
 <meta property="og:site_name" content="tech-yarn" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-11-30T00:00:00-06:00" />
 <script type="application/ld+json">
-{"url":"https://edmtekx.github.io/tech-yarn/tensorflow/macos/keras/2020/11/30/tf2macos-quickstart.html","@type":"BlogPosting","headline":"TensorFlow for Mac OS Quick Start","dateModified":"2020-11-30T00:00:00-06:00","datePublished":"2020-11-30T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://edmtekx.github.io/tech-yarn/tensorflow/macos/keras/2020/11/30/tf2macos-quickstart.html"},"author":{"@type":"Person","name":"tensorflow.org, Ed Martinez"},"description":"This notebook shows a very quick example of how to run standard TensorFow 2.0 code in the Tensorflow for MacOS environment. The code in this notebook is basically a port of the TensorFlow 2 quickstart for beginners from https://www.tensorflow.org/tutorials/quickstart/beginner.","@context":"https://schema.org"}</script>
+{"description":"This notebook shows a very quick example of how to run standard TensorFow 2.0 code in the Tensorflow for MacOS environment. The code in this notebook is basically a port of the TensorFlow 2 quickstart for beginners from https://www.tensorflow.org/tutorials/quickstart/beginner. The code is mostly unchaged from the original tutorial. I have added in a couple of places comments and/or print statements to check and see what is going on. The goal is to (hopefully) demonstrate that you should be able (for the most part) take regular Tensorflow 2.0 code and run it under the Mac OS implementation.","url":"https://edmtekx.github.io/tech-yarn/tensorflow/macos/keras/2020/11/30/tf2macos-quickstart.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://edmtekx.github.io/tech-yarn/tensorflow/macos/keras/2020/11/30/tf2macos-quickstart.html"},"headline":"TensorFlow for Mac OS Quick Start","dateModified":"2020-11-30T00:00:00-06:00","datePublished":"2020-11-30T00:00:00-06:00","author":{"@type":"Person","name":"tensorflow.org, Ed Martinez"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/tech-yarn/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://edmtekx.github.io/tech-yarn/feed.xml" title="tech-yarn" /><link rel="shortcut icon" type="image/x-icon" href="/tech-yarn/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -72,7 +72,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">TensorFlow for Mac OS Quick Start</h1><p class="page-description">This notebook shows a very quick example of how to run standard TensorFow 2.0 code in the Tensorflow for MacOS environment. The code in this notebook is basically a port of the TensorFlow 2 quickstart for beginners from https://www.tensorflow.org/tutorials/quickstart/beginner.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-11-30T00:00:00-06:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">TensorFlow for Mac OS Quick Start</h1><p class="page-description">This notebook shows a very quick example of how to run standard TensorFow 2.0 code in the Tensorflow for MacOS environment. The code in this notebook is basically a port of the TensorFlow 2 quickstart for beginners from `https://www.tensorflow.org/tutorials/quickstart/beginner`. The code is mostly unchaged from the original tutorial. I have added in a couple of places comments and/or print statements to check and see what is going on. The goal is to (hopefully) demonstrate that you should be able (for the most part) take regular Tensorflow 2.0 code and run it under the Mac OS implementation.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-11-30T00:00:00-06:00" itemprop="datePublished">
         Nov 30, 2020
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -80,7 +80,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      2 min read
     
 </span></p>
 
@@ -125,12 +125,9 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h1"><a href="#TensorFlow-for-Mac-OS-Quick-Start">TensorFlow for Mac OS Quick Start </a>
-<ul>
 <li class="toc-entry toc-h2"><a href="#References">References </a></li>
 <li class="toc-entry toc-h2"><a href="#Setup-environment">Setup environment </a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h2"><a href="#Run-the-code">Run the code </a></li>
 </ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
@@ -140,25 +137,6 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="TensorFlow-for-Mac-OS-Quick-Start">
-<a class="anchor" href="#TensorFlow-for-Mac-OS-Quick-Start" aria-hidden="true"><span class="octicon octicon-link"></span></a>TensorFlow for Mac OS Quick Start<a class="anchor-link" href="#TensorFlow-for-Mac-OS-Quick-Start"> </a>
-</h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This notebook shows a very quick example of how to run standard TensorFow 2.0 code in the Tensorflow for MacOS environment. The code in this notebook is basically a port of the <em>TensorFlow 2 quickstart for beginners</em> from <code>https://www.tensorflow.org/tutorials/quickstart/beginner</code>.</p>
-<p>The code is mostly unchaged from the original tutorial. I have added in a couple of places comments and/or print statements to check and see what is going on.</p>
-<p>The goal is to (hopefully) demonstrate that you should be able (for the most part) take regular Tensorflow 2.0 code and run it under the Mac OS implementation.</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -212,6 +190,38 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">tensorflow.python.compiler.mlcompute</span> <span class="kn">import</span> <span class="n">mlcompute</span>
+<span class="n">mlcompute</span><span class="o">.</span><span class="n">set_mlc_device</span><span class="p">(</span><span class="n">device_name</span> <span class="o">=</span> <span class="s1">'gpu'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>WARNING:tensorflow:Eager mode on GPU is extremely slow. Consider to use CPU instead
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>
 
@@ -239,6 +249,15 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Run-the-code">
+<a class="anchor" href="#Run-the-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Run the code<a class="anchor-link" href="#Run-the-code"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>This example will use a dataset that is part of TF 2.0 MNIST. Load the dataset and convert the samples from integers to floating point numbers.</p>
 
 </div>
@@ -261,28 +280,13 @@ window.onload = wrap_img;
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
-11493376/11490434 [==============================] - 1s 0us/step
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     
 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The example uses a very simmple mode - The Keras <code>sequential</code> model. Build the tf.keras.Sequential model by stacking layers. Choose an optimizer and loss function for training:</p>
+<p>The example uses a very simple model - The Keras <code>sequential</code> model. Build the tf.keras.Sequential model by stacking layers. Choose an optimizer and loss function for training:</p>
 
 </div>
 </div>
@@ -340,8 +344,8 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[ 0.3319815 , -0.23297991,  0.08580068,  0.6656826 , -0.14421695,
-        -0.53031254,  0.78752965,  0.5585072 ,  0.15274768,  0.6479464 ]],
+<pre>array([[-0.9982459 ,  0.35465944,  0.0547075 , -0.06532808, -0.09845451,
+        -0.8171675 , -0.52887785,  0.00635976, -0.0428137 ,  0.31171066]],
       dtype=float32)</pre>
 </div>
 
@@ -383,8 +387,8 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[0.10174611, 0.05783066, 0.07954316, 0.14205036, 0.0631986 ,
-        0.04295642, 0.16045743, 0.12761351, 0.08505063, 0.13955314]],
+<pre>array([[0.04070023, 0.1574549 , 0.11665107, 0.10345653, 0.10008553,
+        0.04877959, 0.06507899, 0.11114541, 0.1058122 , 0.15083557]],
       dtype=float32)</pre>
 </div>
 
@@ -452,7 +456,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>3.1475687</pre>
+<pre>3.0204432</pre>
 </div>
 
 </div>
@@ -519,15 +523,15 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Epoch 1/5
-1875/1875 [==============================] - 5s 2ms/step - loss: 0.5005 - accuracy: 0.8489
+1875/1875 [==============================] - 47s 24ms/step - loss: 0.4854 - accuracy: 0.8572
 Epoch 2/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.1974 - accuracy: 0.9408
+1875/1875 [==============================] - 48s 26ms/step - loss: 0.1519 - accuracy: 0.9550
 Epoch 3/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.1597 - accuracy: 0.9523
+1875/1875 [==============================] - 50s 27ms/step - loss: 0.1104 - accuracy: 0.9662
 Epoch 4/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.1359 - accuracy: 0.9577
+1875/1875 [==============================] - 47s 25ms/step - loss: 0.0900 - accuracy: 0.9717
 Epoch 5/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.1263 - accuracy: 0.9608
+1875/1875 [==============================] - 48s 26ms/step - loss: 0.0742 - accuracy: 0.9773
 </pre>
 </div>
 </div>
@@ -537,7 +541,7 @@ Epoch 5/5
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;tensorflow.python.keras.callbacks.History at 0x7fa17f0a9f70&gt;</pre>
+<pre>&lt;tensorflow.python.keras.callbacks.History at 0x7fc94c9ad370&gt;</pre>
 </div>
 
 </div>
@@ -576,7 +580,7 @@ Epoch 5/5
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>313/313 - 1s - loss: 0.0974 - accuracy: 0.9706
+<pre>313/313 - 5s - loss: 0.0693 - accuracy: 0.9781
 </pre>
 </div>
 </div>
@@ -586,7 +590,7 @@ Epoch 5/5
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[0.09736651927232742, 0.9706000089645386]</pre>
+<pre>[0.0692838728427887, 0.9781000018119812]</pre>
 </div>
 
 </div>
@@ -649,21 +653,21 @@ Epoch 5/5
 
 <div class="output_text output_subarea output_execute_result">
 <pre>&lt;tf.Tensor: shape=(5, 10), dtype=float32, numpy=
-array([[3.04166275e-10, 1.44320328e-11, 3.49433162e-06, 1.35840196e-03,
-        1.29123058e-12, 1.50930397e-08, 2.67769429e-16, 9.98633206e-01,
-        3.44230671e-06, 1.45542526e-06],
-       [5.36175207e-07, 3.06448856e-05, 9.99893904e-01, 5.93089026e-05,
-        3.26807116e-17, 2.62504585e-07, 1.43621257e-08, 7.79763827e-14,
-        1.52049215e-05, 7.31219664e-13],
-       [5.85777578e-08, 9.99133885e-01, 6.41653896e-05, 3.23419226e-05,
-        1.75682599e-05, 3.31187880e-06, 3.60298395e-06, 4.57659306e-04,
-        2.86272872e-04, 1.06325695e-06],
-       [9.99991655e-01, 1.56686377e-13, 5.21514312e-06, 3.77243801e-08,
-        2.72544834e-12, 5.37931612e-07, 4.18074734e-07, 1.92167181e-06,
-        4.93313890e-10, 1.81977938e-07],
-       [6.88822911e-06, 8.98235826e-12, 5.17887929e-05, 3.34327638e-07,
-        9.75849807e-01, 8.88953906e-08, 9.21286812e-07, 5.88996976e-04,
-        5.19101104e-06, 2.34958865e-02]], dtype=float32)&gt;</pre>
+array([[5.12671534e-07, 3.93867783e-09, 9.53463939e-07, 2.96221348e-04,
+        1.17695464e-10, 1.58727730e-07, 1.33805597e-11, 9.99693453e-01,
+        5.25140251e-07, 8.21285812e-06],
+       [5.30549357e-07, 1.09513676e-04, 9.99669909e-01, 2.14899832e-04,
+        7.75622188e-12, 3.36039221e-07, 6.95063633e-08, 3.82515859e-11,
+        4.87999478e-06, 3.69983266e-10],
+       [4.21975045e-07, 9.99065220e-01, 1.53246379e-04, 1.77207312e-05,
+        1.77628808e-05, 3.08062681e-06, 7.81090694e-06, 6.43892388e-04,
+        9.00170926e-05, 7.40005873e-07],
+       [9.99787033e-01, 1.03599439e-06, 1.09403569e-04, 8.73194494e-07,
+        5.92203037e-07, 2.30637725e-05, 4.90020193e-06, 3.01722612e-05,
+        4.84664220e-08, 4.29155552e-05],
+       [1.21631429e-05, 6.49704290e-09, 4.19733296e-05, 2.69434622e-07,
+        9.94199276e-01, 1.50252458e-06, 6.87295824e-06, 6.19247730e-05,
+        8.52300127e-06, 5.66747272e-03]], dtype=float32)&gt;</pre>
 </div>
 
 </div>
