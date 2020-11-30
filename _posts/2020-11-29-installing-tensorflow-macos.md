@@ -13,18 +13,18 @@ The official installation instructions are in the Git Repo for TensorFlow for Ma
 
 There are two key requirements:
 
-* macOS 11.0 Big Sur. (however as you will see later the `pip` wheels that have the packages for TF Mac actually won't work if you leave the 11.0 version reference. They have to be changed to 10.6. This was discovered by the community.
+* macOS 11.0 Big Sur. However as you will see later the `pip` wheels that have the packages for TF Mac actually won't work if you leave the 11.0 version reference. They have to be changed to 10.6. This was discovered by the community.
 
-* Python 3.8.  Supposedly available from the Xcode command line tools. While I installed this, I never figured out how to use them, so I just used a standard conda environment and chose a conda Python 3.8 distribution.
+* Python 3.8.  Supposedly available from the Xcode command line tools. While I installed this, I never figured out how to use them, so I just used a standard `conda` environment and chose a `conda` Python 3.8 distribution.
 
 The instructions in this post are somewhat different than what is recommended in the repo above. The Apple Git repo suggests using a virtual environment and provides a short sell script to try this out. I could not get this to work, so I created a different approach that I have used elsewhere. Besides I don't use `virtualenv`, but rather `conda` so the instructions provided here are for installing it inside a `conda` environment and it is a very manual process at that.
 
-The Apple developers have said that they will look into creating a more formal approach to using `conda`, so eventually it is likely that these instructions will become outdated.
+The Apple developers have stated that they will look into creating a more formal approach to using `conda`, so eventually it is likely that these instructions will become outdated.
 
 
 # Conda installation Instructions
 
-While Tensorflow for MacOS is supposed to be able to work on both Intel and the new M1 based Macs, these installation instructions have only been tested in an Intel based Mac.
+While Tensorflow for MacOS is supposed to be able to work on both Intel and the new M1 based Macs, these installation instructions have only been tested in an Intel based Mac. In fact as written here, they will not work because I am using the `x86`pip wheels. The ARM wheels are different.
 
 These are the steps:
 
