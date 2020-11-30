@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Installing tensorflow_macos
-categories: [markdown]
+categories: [tensorflow, Mac OS]
 title: Installation of Tensorflow for Mac OS
 ---
 # Background
@@ -30,14 +30,18 @@ These are the steps:
 
 1. Create a Conda environment with Python 3.8:
 
-	`conda create -n tfmac python=3.8`
+	```
+	conda create -n tfmac python=3.8
+	```
 	
 2. Activate the environment: 
 
-	`conda activate tfmac`
+	```
+	conda activate tfmac
+	```
 
 3. Go to 
-	https://github.com/apple/tensorflow_macos/releases/ and download/v0.1alpha0/tensorflow_macos-0.1alpha0.tar.gz 
+	`https://github.com/apple/tensorflow_macos/releases/` and download from the **Assets** section towards bottom of the page: `tensorflow_macos-0.1alpha0.tar.gz`
 	
 4. Extract it to a folder of  your choosing.
 5. In the extracted folder go to the `x86_64` folder. Inside that folder there will be a few `"*whl"` files. Their names will be in the format of: 
@@ -58,24 +62,27 @@ These are the steps:
 	
 6. Now install them with pip, for example:
 
-	`pip install grpcio-1.33.2-cp38-cp38-macosx_10_16_x86_64.whl`
+	```
+	pip install grpcio-1.33.2-cp38-cp38-macosx_10_16_x86_64.whl
+	```
 
 	Repeat for all of the wheels in the directory.
 	
 7. Install other packages tht are needed:
+	```
+    conda install -c conda-forge -y absl-py
+    		conda install -c conda-forge -y astunparse
+		conda install -c conda-forge -y gast
+		conda install -c conda-forge -y opt_einsum
+		conda install -c conda-forge -y termcolor
+		conda install -c conda-forge -y typing_extensions
+		conda install -c conda-forge -y wheel
+		conda install -c conda-forge -y typeguard
 	
-	`conda install -c conda-forge -y absl-py`	
-		`conda install -c conda-forge -y astunparse`
-		`conda install -c conda-forge -y gast`
-		`conda install -c conda-forge -y opt_einsum`
-		`conda install -c conda-forge -y termcolor`
-		`conda install -c conda-forge -y typing_extensions`
-		`conda install -c conda-forge -y wheel`
-		`conda install -c conda-forge -y typeguard`
+	pip install tensorboard
 	
-	`pip install tensorboard`
-	
-	`pip install wrapt flatbuffers tensorflow_estimator google_pasta keras_preprocessing protobu`
+	pip install wrapt flatbuffers tensorflow_estimator google_pasta keras_preprocessing protobu
+	```
 	
 8. This will give you a basic TF for Mac environment.  You will still probably need to add other packages to the environment (if they were not added by the wheels):
 
