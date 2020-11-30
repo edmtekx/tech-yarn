@@ -111,21 +111,21 @@ window.onload = wrap_img;
 
 <ul>
   <li>
-    <p>macOS 11.0 Big Sur. (however as you will see later the pip wheels that have the packages for TF Mac actually won’t work if you leave the 11.0 version reference. They have to be changed to 10.6. This was discovered by the community.</p>
+    <p>macOS 11.0 Big Sur. However as you will see later the <code class="language-plaintext highlighter-rouge">pip</code> wheels that have the packages for TF Mac actually won’t work if you leave the 11.0 version reference. They have to be changed to 10.6. This was discovered by the community.</p>
   </li>
   <li>
-    <p>Python 3.8.  Supposedly available from the Xcode command line tools. While I installed this, I never figured out how to use them, so I just used a standard conda environment and chose a conda Python 3.8 distribution.</p>
+    <p>Python 3.8.  Supposedly available from the Xcode command line tools. While I installed this, I never figured out how to use them, so I just used a standard <code class="language-plaintext highlighter-rouge">conda</code> environment and chose a <code class="language-plaintext highlighter-rouge">conda</code> Python 3.8 distribution.</p>
   </li>
 </ul>
 
 <p>The instructions in this post are somewhat different than what is recommended in the repo above. The Apple Git repo suggests using a virtual environment and provides a short sell script to try this out. I could not get this to work, so I created a different approach that I have used elsewhere. Besides I don’t use <code class="language-plaintext highlighter-rouge">virtualenv</code>, but rather <code class="language-plaintext highlighter-rouge">conda</code> so the instructions provided here are for installing it inside a <code class="language-plaintext highlighter-rouge">conda</code> environment and it is a very manual process at that.</p>
 
-<p>The Apple developers have said that they will look into creating a more formal approach to using <code class="language-plaintext highlighter-rouge">conda</code>, so eventually it is likely that these instructions will become outdated.</p>
+<p>The Apple developers have stated that they will look into creating a more formal approach to using <code class="language-plaintext highlighter-rouge">conda</code>, so eventually it is likely that these instructions will become outdated.</p>
 
 <h1 id="conda-installation-instructions">
 <a class="anchor" href="#conda-installation-instructions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conda installation Instructions</h1>
 
-<p>While Tensorflow for MacOS is supposed to be able to work on both Intel and the new M1 based Macs, these installation instructions have only been tested in an Intel based Mac.</p>
+<p>While Tensorflow for MacOS is supposed to be able to work on both Intel and the new M1 based Macs, these installation instructions have only been tested in an Intel based Mac. In fact as written here, they will not work because I am using the <code class="language-plaintext highlighter-rouge">x86</code>pip wheels. The ARM wheels are different.</p>
 
 <p>These are the steps:</p>
 
@@ -167,7 +167,7 @@ window.onload = wrap_img;
     <p>Do this for all of the wheels.</p>
   </li>
   <li>
-    <p>Now install them with pip, for example:</p>
+    <p>Now install them with <code class="language-plaintext highlighter-rouge">pip</code>, for example:</p>
 
     <div class="language-plaintext highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code> pip install grpcio-1.33.2-cp38-cp38-macosx_10_16_x86_64.whl
