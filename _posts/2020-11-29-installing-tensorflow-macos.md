@@ -13,7 +13,7 @@ The official installation instructions are in the Git Repo for TensorFlow for Ma
 
 There are two key requirements:
 
-* macOS 11.0 Big Sur. (however as you will see later the pip wheels that have the packages for TF Mac actually won't work if you leave the 11.0 version reference. They have to be changed to 10.6. This was discovered by the community.
+* macOS 11.0 Big Sur. (however as you will see later the `pip` wheels that have the packages for TF Mac actually won't work if you leave the 11.0 version reference. They have to be changed to 10.6. This was discovered by the community.
 
 * Python 3.8.  Supposedly available from the Xcode command line tools. While I installed this, I never figured out how to use them, so I just used a standard conda environment and chose a conda Python 3.8 distribution.
 
@@ -60,7 +60,7 @@ These are the steps:
 	
 	Do this for all of the wheels.
 	
-6. Now install them with pip, for example:
+6. Now install them with `pip`, for example:
 
 	```
 	pip install grpcio-1.33.2-cp38-cp38-macosx_10_16_x86_64.whl
