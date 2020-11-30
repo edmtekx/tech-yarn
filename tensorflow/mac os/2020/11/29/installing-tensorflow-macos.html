@@ -10,13 +10,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Installing tensorflow_macos" />
 <meta property="og:description" content="Installing tensorflow_macos" />
-<link rel="canonical" href="https://edmtekx.github.io/tech-yarn/markdown/2020/11/29/installing-tensorflow-macos.html" />
-<meta property="og:url" content="https://edmtekx.github.io/tech-yarn/markdown/2020/11/29/installing-tensorflow-macos.html" />
+<link rel="canonical" href="https://edmtekx.github.io/tech-yarn/tensorflow/mac%20os/2020/11/29/installing-tensorflow-macos.html" />
+<meta property="og:url" content="https://edmtekx.github.io/tech-yarn/tensorflow/mac%20os/2020/11/29/installing-tensorflow-macos.html" />
 <meta property="og:site_name" content="tech-yarn" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-11-29T00:00:00-06:00" />
 <script type="application/ld+json">
-{"url":"https://edmtekx.github.io/tech-yarn/markdown/2020/11/29/installing-tensorflow-macos.html","@type":"BlogPosting","headline":"Installation of Tensorflow for Mac OS","dateModified":"2020-11-29T00:00:00-06:00","datePublished":"2020-11-29T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://edmtekx.github.io/tech-yarn/markdown/2020/11/29/installing-tensorflow-macos.html"},"description":"Installing tensorflow_macos","@context":"https://schema.org"}</script>
+{"url":"https://edmtekx.github.io/tech-yarn/tensorflow/mac%20os/2020/11/29/installing-tensorflow-macos.html","@type":"BlogPosting","headline":"Installation of Tensorflow for Mac OS","dateModified":"2020-11-29T00:00:00-06:00","datePublished":"2020-11-29T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://edmtekx.github.io/tech-yarn/tensorflow/mac%20os/2020/11/29/installing-tensorflow-macos.html"},"description":"Installing tensorflow_macos","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/tech-yarn/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://edmtekx.github.io/tech-yarn/feed.xml" title="tech-yarn" /><link rel="shortcut icon" type="image/x-icon" href="/tech-yarn/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -84,7 +84,10 @@ window.onload = wrap_img;
     
       <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
       
-        <a class="category-tags-link" href="/tech-yarn/categories/#markdown">markdown</a>
+        <a class="category-tags-link" href="/tech-yarn/categories/#tensorflow">tensorflow</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/tech-yarn/categories/#Mac OS">Mac OS</a>
         
       
       </p>
@@ -130,16 +133,20 @@ window.onload = wrap_img;
   <li>
     <p>Create a Conda environment with Python 3.8:</p>
 
-    <p><code class="language-plaintext highlighter-rouge">conda create -n tfmac python=3.8</code></p>
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> conda create -n tfmac python=3.8
+</code></pre></div>    </div>
   </li>
   <li>
     <p>Activate the environment:</p>
 
-    <p><code class="language-plaintext highlighter-rouge">conda activate tfmac</code></p>
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> conda activate tfmac
+</code></pre></div>    </div>
   </li>
   <li>
     <p>Go to 
- https://github.com/apple/tensorflow_macos/releases/ and download/v0.1alpha0/tensorflow_macos-0.1alpha0.tar.gz</p>
+ <code class="language-plaintext highlighter-rouge">https://github.com/apple/tensorflow_macos/releases/</code> and download from the <strong>Assets</strong> section towards bottom of the page: <code class="language-plaintext highlighter-rouge">tensorflow_macos-0.1alpha0.tar.gz</code></p>
   </li>
   <li>Extract it to a folder of  your choosing.</li>
   <li>
@@ -162,32 +169,34 @@ window.onload = wrap_img;
   <li>
     <p>Now install them with pip, for example:</p>
 
-    <p><code class="language-plaintext highlighter-rouge">pip install grpcio-1.33.2-cp38-cp38-macosx_10_16_x86_64.whl</code></p>
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> pip install grpcio-1.33.2-cp38-cp38-macosx_10_16_x86_64.whl
+</code></pre></div>    </div>
 
     <p>Repeat for all of the wheels in the directory.</p>
   </li>
-  <li>
-    <p>Install other packages tht are needed:</p>
-
-    <p><code class="language-plaintext highlighter-rouge">conda install -c conda-forge -y absl-py</code></p>
-
-    <p><code class="language-plaintext highlighter-rouge">conda install -c conda-forge -y astunparse</code></p>
-
-    <p><code class="language-plaintext highlighter-rouge">conda install -c conda-forge -y gast</code></p>
-
-    <p><code class="language-plaintext highlighter-rouge">conda install -c conda-forge -y opt_einsum</code></p>
-
-    <p><code class="language-plaintext highlighter-rouge">conda install -c conda-forge -y termcolor</code></p>
-
-    <p><code class="language-plaintext highlighter-rouge">conda install -c conda-forge -y typing_extensions</code></p>
-
-    <p><code class="language-plaintext highlighter-rouge">conda install -c conda-forge -y wheel</code></p>
-
-    <p><code class="language-plaintext highlighter-rouge">conda install -c conda-forge -y typeguard</code></p>
-
-    <p><code class="language-plaintext highlighter-rouge">pip install tensorboard</code></p>
-
-    <p><code class="language-plaintext highlighter-rouge">pip install wrapt flatbuffers tensorflow_estimator google_pasta keras_preprocessing protobu</code></p>
+  <li>Install other packages tht are needed:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> conda install -c conda-forge -y absl-py
+    	
+ conda install -c conda-forge -y astunparse
+	
+ conda install -c conda-forge -y gast
+	
+ conda install -c conda-forge -y opt_einsum
+	
+ conda install -c conda-forge -y termcolor
+	
+ conda install -c conda-forge -y typing_extensions
+	
+ conda install -c conda-forge -y wheel
+	
+ conda install -c conda-forge -y typeguard
+	
+ pip install tensorboard
+	
+ pip install wrapt flatbuffers tensorflow_estimator google_pasta keras_preprocessing protobu
+</code></pre></div>    </div>
   </li>
   <li>This will give you a basic TF for Mac environment.  You will still probably need to add other packages to the environment (if they were not added by the wheels):</li>
 </ol>
@@ -220,7 +229,7 @@ window.onload = wrap_img;
 </ol>
 
 
-  </div><a class="u-url" href="/tech-yarn/markdown/2020/11/29/installing-tensorflow-macos.html" hidden></a>
+  </div><a class="u-url" href="/tech-yarn/tensorflow/mac%20os/2020/11/29/installing-tensorflow-macos.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
